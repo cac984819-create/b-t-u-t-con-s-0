@@ -2,11 +2,83 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kỹ thuật vẽ nâng cao - IbisPaint X</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; }
-        nav { background: #f4f4f4; padding: 10px; margin-bottom: 20px; border-radius: 5px; }
-        nav a { text-decoration: none; color: blue; font-weight: bold; }
+        :root {
+            --primary-color: #007bff;
+            --bg-color: #f8f9fa;
+            --text-color: #333;
+            --card-bg: #ffffff;
+        }
+
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.8; 
+            padding: 20px; 
+            max-width: 900px; 
+            margin: auto; 
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        nav { 
+            background: var(--card-bg); 
+            padding: 15px 20px; 
+            margin-bottom: 30px; 
+            border-radius: 10px; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav a { 
+            text-decoration: none; 
+            color: var(--primary-color); 
+            font-weight: bold; 
+            transition: 0.3s;
+        }
+
+        nav a:hover { color: #0056b3; }
+
+        h1 { 
+            color: var(--primary-color); 
+            text-align: center; 
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+
+        .section {
+            background: var(--card-bg);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--primary-color);
+        }
+
+        h2 { color: #444; margin-top: 0; }
+
+        .tip-box {
+            background: #e7f3ff;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 10px;
+            font-size: 0.95em;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #777;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+
+        /* Hiệu ứng rê chuột */
+        .section:hover {
+            transform: translateY(-5px);
+            transition: 0.3s ease;
+        }
     </style>
 </head>
 <body>
@@ -14,18 +86,39 @@
         <a href="index.html">← Quay lại Trang Chủ</a>
     </nav>
 
-    <h1>Kỹ thuật vẽ nâng cao</h1>
+    <h1>Kỹ thuật vẽ nâng cao trên IbisPaint X</h1>
     
-    <div>
-        <h2>1. Sử dụng Layer (Lớp)</h2>
-        <p>Layer giúp bạn quản lý các nét vẽ tách biệt (nét vẽ, màu nền, đổ bóng) mà không làm ảnh hưởng lẫn nhau.</p>
-        
-        <h2>2. Chế độ hòa trộn (Blending Mode)</h2>
-        <p>Sử dụng các chế độ như Multiply để đổ bóng hoặc Add để tạo hiệu ứng ánh sáng.</p>
+    <div class="section">
+        <h2>1. Quản lý Layer (Lớp) chuyên sâu</h2>
+        <p>Layer giúp bạn quản lý các thành phần tách biệt như nét vẽ (Lineart), màu nền (Base color) và đổ bóng (Shading).</p>
+        <div class="tip-box">
+            <strong>💡 Mẹo:</strong> Luôn đặt tên cho Layer để tránh nhầm lẫn khi dự án có hàng chục lớp khác nhau.
+        </div>
     </div>
 
-    <hr>
-    <p><i>Thực hiện bởi: Cương - 12A12</i></p>
+    <div class="section">
+        <h2>2. Chế độ hòa trộn (Blending Mode)</h2>
+        <p>Thay đổi cách các lớp màu tương tác với nhau:</p>
+        <ul>
+            <li><strong>Multiply (Nhân):</strong> Tốt nhất để vẽ bóng (làm màu đậm hơn).</li>
+            <li><strong>Add / Screen:</strong> Hoàn hảo để tạo hiệu ứng ánh sáng, hào quang.</li>
+            <li><strong>Overlay:</strong> Tăng độ tương phản và độ bão hòa màu sắc.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>3. Clipping Mask & Alpha Lock</h2>
+        <p>Đây là bộ đôi quyền năng nhất giúp bạn tô màu không bao giờ bị lem ra ngoài vùng mong muốn.</p>
+        <div class="tip-box">
+            - <strong>Alpha Lock:</strong> Khóa vùng đã vẽ trên chính Layer đó.<br>
+            - <strong>Clipping Mask:</strong> Áp dụng giới hạn của Layer dưới lên Layer trên.
+        </div>
+    </div>
+
+    <footer>
+        <p>Thực hiện bởi: <strong>Cương - 12A12</strong></p>
+        <p>&copy; 2023 Hướng dẫn học vẽ Digital</p>
+    </footer>
 </body>
 </html>
 <a href="index.html">Quay lại trang chủ</a>
