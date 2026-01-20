@@ -5,110 +5,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sử dụng IbisPaint X cơ bản</title>
     <style>
-        nav a:hover {
-    color: #ffffff !important;
-    text-shadow: 0 0 8px rgba(255,255,255,0.8);
-    transition: 0.3s;
-}
-        .btn-chuyen-trang {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #2196F3; /* Màu xanh dương */
-    color: white;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: bold;
-    transition: 0.3s; /* Hiệu ứng mượt khi di chuột */
-}
+        /* Toàn bộ trang web */
+        body { 
+            font-family: sans-serif; 
+            line-height: 1.6; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #f4f4f4; /* Màu nền xám nhạt cho web chuyên nghiệp */
+        }
 
-.btn-chuyen-trang:hover {
-    background-color: #0b7dda; /* Đổi màu đậm hơn khi di chuột vào */
-    transform: scale(1.05); /* Phóng to nhẹ một chút */
-}
-        body { font-family: sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; }
-        img { max-width: 100%; height: auto; display: block; margin: 10px 0; border: 1px solid #ddd; }
+        /* Thanh Menu màu xanh */
+        nav {
+            background: #2196F3; 
+            padding: 15px; 
+            text-align: center; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            color: white; 
+            margin: 0 15px; 
+            text-decoration: none; 
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffeb3b !important; /* Di chuột vào chữ đổi sang màu vàng cho nổi */
+        }
+
+        /* Căn giữa toàn bộ nội dung */
+        .container { 
+            max-width: 800px; 
+            margin: 30px auto; /* Lệnh quan trọng nhất để căn giữa */
+            padding: 20px; 
+            background: white; 
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        img { 
+            max-width: 100%; 
+            height: auto; 
+            display: block; 
+            margin: 20px auto; /* Căn giữa hình ảnh */
+            border-radius: 5px;
+        }
+
+        /* Nút bấm chuyển trang */
+        .btn-chuyen-trang {
+            display: block;
+            width: fit-content;
+            margin: 20px auto; /* Căn giữa nút */
+            padding: 12px 24px;
+            background-color: #2196F3;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-chuyen-trang:hover {
+            background-color: #0b7dda;
+            transform: scale(1.05);
+        }
+
         dt { font-weight: bold; color: #2c3e50; margin-top: 15px; }
-        dd { margin-bottom: 10px; }
+        dd { margin-bottom: 20px; text-align: center; } /* Căn giữa tên kích thước và ảnh trong list */
     </style>
 </head>
 <body>
-    <!DOCTYPE html>
-<html>
-<head>
-    </head>
-<body>
 
-    <nav style="background: #2196F3; ...">
+    <nav>
         <a href="index.html">Trang Chủ</a>
         <a href="ky-thuat.html">Kỹ Thuật Vẽ</a>
     </nav>
 
     <div class="container">
-        <h1>Giới thiệu</h1>
-        ...
-    </div>
-
-</body>
-</html>
-    <div>
-        <h1>Giới thiệu</h1>
+        <h1 style="text-align: center; color: #2196F3;">Giới thiệu</h1>
         <p>IbisPaint X là một phần mềm vẽ kĩ thuật số miễn phí, hỗ trợ nhiều tính năng như vẽ tranh, animation, khung truyện,...vv</p>
 
-        <h1>Cách sử dụng cơ bản</h1>
+        <h1 style="text-align: center; color: #2196F3;">Cách sử dụng cơ bản</h1>
         <h2>Tạo canvas</h2>
         <p>Khi mở ứng dụng, bấm vào <strong>"Thư viện của tôi"</strong> sau đó bấm vào dấu <strong>"+"</strong> ở góc dưới bên trái màn hình.</p>
         <img src="https://uploads.onecompiler.io/444f9qnmz/444qdkycu/Kh%C3%B4ng%20C%C3%B3%20Ti%C3%AAu%20%C4%90%E1%BB%81273_20251112222836.png" width="250" alt="Hướng dẫn tạo canvas">
 
-        <p>Có thể tùy chọn nhiều kích thước canvas khác nhau tùy theo nhu cầu sử dụng, số càng lớn thì canvas cũng càng lớn. Sau đây là các tỷ lệ canvas thông dụng:</p>
+        <p>Có thể tùy chọn nhiều kích thước canvas khác nhau tùy theo nhu cầu sử dụng. Sau đây là các tỷ lệ canvas thông dụng:</p>
         
         <dl>
-            <dt>Minh họa nửa người</dt>
-            <dd>2500×3700px</dd>
+            <dt>Minh họa nửa người (2500×3700px)</dt>
             <dd><img src="https://uploads.onecompiler.io/444f9qnmz/444qdkycu/297c8a979ed84db04f223ec2af315d1d.jpg" width="250"></dd>
 
-            <dt>Avatar khung vuông</dt>
-            <dd>2500×2500px</dd>
+            <dt>Avatar khung vuông (2500×2500px)</dt>
             <dd><img src="https://uploads.onecompiler.io/444f9qnmz/444qdkycu/FB_IMG_1762959409099.jpg" width="250"></dd>
 
-            <dt>Minh họa dáng người đứng</dt>
-            <dd>2600×3600px</dd>
+            <dt>Minh họa dáng người đứng (2600×3600px)</dt>
             <dd><img src="https://uploads.onecompiler.io/444f9qnmz/444qdkycu/63260c9bc7ab649e10daa90b1660d3f5.jpg" width="260"></dd>
-
-            <dt>Minh họa toàn thân</dt>
-            <dd>2500×4600px</dd>
-            <dd><img src="https://uploads.onecompiler.io/444f9qnmz/444qdkycu/b0c3dc240ed5991ecfe440ff25f187a5.jpg" width="250"></dd>
         </dl>
 
         <h2>Điều chỉnh cọ</h2>
-        <p>IbisPaint X hỗ trợ rất nhiều loại cọ khác nhau phục vụ mọi nhu cầu của người dùng, lên đến gần 400 loại cọ mặc định. Ngoài ra người dùng còn có thể tự tạo cọ riêng, hay nhập mã cọ của người khác để làm phong phú thêm kho cọ của bản thân.</p>
-        </center><img src="https://uploads.onecompiler.io/444f9qnmz/444qdkycu/Kh%C3%B4ng%20C%C3%B3%20Ti%C3%AAu%20%C4%90%E1%BB%81273_20251113212708.png" width="350">
+        <p>IbisPaint X hỗ trợ rất nhiều loại cọ khác nhau (gần 400 loại mặc định). Bạn có thể tự tạo hoặc nhập mã cọ của người khác.</p>
+        <img src="https://uploads.onecompiler.io/444f9qnmz/444qdkycu/Kh%C3%B4ng%20C%C3%B3%20Ti%C3%AAu%20%C4%90%E1%BB%81273_20251113212708.png" width="350">
 
-        <p>Một số mã cọ thông dụng của người dùng:</p>
-        <dl>
-        
-            <dt>Cọ tô màu</dt>
-            <dd><img src="https://uploads.onecompiler.io/444f9qnmz/444qdkycu/daceaecede197c7b3798bab39596ad32.jpg" width="260"></dd>
-            
-            <dt>Cọ cỏ</dt>
-            <dd><img src="https://uploads.onecompiler.io/444f9qnmz/444qdkycu/f70b3a43c7d81ac0f7a8f6b7144ff605.jpg" width="260"></dd>
-        </dl>
+        <a href="ky-thuat.html" class="btn-chuyen-trang">Khám phá kỹ thuật nâng cao ngay!</a>
 
-        <p><strong>Ngoài ra</strong>, trên giao diện chính của IbisPaint X cũng cung cấp rất nhiều các công cụ hỗ trợ, được tóm tắt một phần trong bảng dưới đây:</p>
-        <img src="https://uploads.onecompiler.io/444f9qnmz/444qdkycu/Kh%C3%B4ng%20C%C3%B3%20Ti%C3%AAu%20%C4%90%E1%BB%81273_20251113212053.png" width="360">
-        
-        <p><a href="https://share.google/E4UgUkVYbAiVbZGYi" target="_blank">Trang web chính thức của Ibis Paint X</a></p>
+        <p style="text-align: center;">
+            <a href="https://share.google/E4UgUkVYbAiVbZGYi" target="_blank">Trang web chính thức của Ibis Paint X</a>
+        </p>
 
         <hr>
-        <dl>
-            <dt>Được thực hiện bởi:</dt>
-            <dd>Cương - Lớp 12A12</dd>
-        </dl>
+        <footer style="text-align: center; color: #888;">
+            <p>Được thực hiện bởi: <strong>Cương - Lớp 12A12</strong></p>
+        </footer>
     </div>
+
 </body>
-    <a href="ky-thuat.html" class="btn-chuyen-trang">Khám phá kỹ thuật nâng cao ngay!</a>
-    <nav style="background: #333; padding: 15px; text-align: center;">
-    <a href="index.html" style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;">Trang Chủ</a>
-    <a href="ky-thuat.html" style="color: #ddd; text-decoration: none;">Kỹ Thuật Vẽ</a>
-</nav>
 </html>
-<a href="ky-thuat.html">Bấm vào đây để xem Kỹ thuật vẽ nâng cao</a>
